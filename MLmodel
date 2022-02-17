@@ -1,0 +1,39 @@
+flavors:
+  python_function:
+    env: conda.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    python_version: 3.9.7
+  sklearn:
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.0.2
+model_uuid: 1ec1f60964f44f52b34e0db1542c4c29
+signature:
+  inputs: '[{"name": "NAME_INCOME_TYPE", "type": "string"}, {"name": "AMT_ANNUITY",
+    "type": "double"}, {"name": "EXT_SOURCE_1", "type": "double"}, {"name": "EXT_SOURCE_2",
+    "type": "double"}, {"name": "EXT_SOURCE_3", "type": "double"}, {"name": "DAYS_EMPLOYED_PERC",
+    "type": "double"}, {"name": "CREDIT_TERM", "type": "double"}, {"name": "STATUS_0_SUM",
+    "type": "double"}, {"name": "STATUS_1_SUM", "type": "double"}, {"name": "STATUS_2_SUM",
+    "type": "double"}, {"name": "STATUS_3_SUM", "type": "double"}, {"name": "STATUS_4_SUM",
+    "type": "double"}, {"name": "STATUS_5_SUM", "type": "double"}, {"name": "STATUS_C_SUM",
+    "type": "double"}, {"name": "STATUS_X_SUM", "type": "double"}, {"name": "CREDIT_ACTIVE_Active_SUM",
+    "type": "double"}, {"name": "CREDIT_ACTIVE_Bad_debt_SUM", "type": "double"}, {"name":
+    "CREDIT_ACTIVE_Closed_SUM", "type": "double"}, {"name": "CREDIT_ACTIVE_Sold_SUM",
+    "type": "double"}, {"name": "CREDIT_TYPE_Another_type_of_loan_SUM", "type": "double"},
+    {"name": "CREDIT_TYPE_Cash_loan_(non-earmarked)_SUM", "type": "double"}, {"name":
+    "CREDIT_TYPE_Consumer_credit_SUM", "type": "double"}, {"name": "CREDIT_TYPE_Credit_card_SUM",
+    "type": "double"}, {"name": "CREDIT_TYPE_Microloan_SUM", "type": "double"}, {"name":
+    "CREDIT_TYPE_Unknown_type_of_loan_SUM", "type": "double"}, {"name": "DAYS_BIRTH",
+    "type": "double"}, {"name": "FLAG_EMP_PHONE", "type": "double"}, {"name": "FLAG_WORK_PHONE",
+    "type": "double"}, {"name": "FLAG_PHONE", "type": "double"}, {"name": "REGION_RATING_CLIENT_W_CITY",
+    "type": "double"}, {"name": "REG_CITY_NOT_LIVE_CITY", "type": "double"}, {"name":
+    "REG_CITY_NOT_WORK_CITY", "type": "double"}, {"name": "LIVE_CITY_NOT_WORK_CITY",
+    "type": "double"}, {"name": "FLAG_DOCUMENT_2", "type": "double"}, {"name": "FLAG_DOCUMENT_3",
+    "type": "double"}, {"name": "FLAG_DOCUMENT_6", "type": "double"}, {"name": "FLAG_DOCUMENT_9",
+    "type": "double"}, {"name": "FLAG_DOCUMENT_13", "type": "double"}, {"name": "FLAG_DOCUMENT_14",
+    "type": "double"}, {"name": "FLAG_DOCUMENT_16", "type": "double"}, {"name": "FLAG_DOCUMENT_21",
+    "type": "double"}, {"name": "F_AGE", "type": "double"}, {"name": "M_AGE", "type":
+    "double"}, {"name": "CNT_ADULTS", "type": "double"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+utc_time_created: '2022-02-17 14:13:06.721217'
