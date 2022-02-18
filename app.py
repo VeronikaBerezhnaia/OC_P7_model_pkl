@@ -16,11 +16,12 @@ def predict():
     try:
         data = request.get_json()
        df=pandas.DataFrame(data["data"], columns=data["columns"])
- #       print("print: "+str(df))
+ #       print("dataframe: "+str(df))
         prediction = model.predict_proba(df)
  #       prediction = model.predict_proba(pandas.DataFrame(data["data"], columns=data["columns"]))
-        print(prediction)
-        output = {'predictions': prediction.tolist()[0][0]}
+        print("prediction", prediction)
+        output = {'predictions': prediction.tolist()[0]}
+ #       output = {'predictions': prediction.tolist()[0][0]}
  #       output = {'predictions': prediction[0]}
         return jsonify( output )
     except NameError:
