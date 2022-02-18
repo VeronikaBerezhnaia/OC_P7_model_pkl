@@ -20,9 +20,8 @@ def predict():
         prediction = model.predict_proba(df)
  #       prediction = model.predict_proba(pandas.DataFrame(data["data"], columns=data["columns"]))
         print("prediction", prediction)
-        output = {'predictions': prediction.tolist()[0]}
+        output = {'predictions': prediction.tolist()[0][1]}
  #       output = {'predictions': prediction.tolist()[0][0]}
- #       output = {'predictions': prediction[0]}
         return jsonify( output )
     except NameError:
         print(NameError)
