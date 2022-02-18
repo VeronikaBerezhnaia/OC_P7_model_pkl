@@ -15,9 +15,9 @@ model = pickle.load(open('saved_model.pkl','rb'))
 def predict():
     try:
         data = request.get_json()
-        print("print: "+str([data["data"]][0]))
-        repr("repr: "+str([data["data"]][0]))
-        prediction = model.predict_proba(data["data"][0])
+        print("print: "+str(pd.DataFrame(data["data"], columns=data["columns"]))
+ #       prediction = model.predict_proba(data["data"][0])
+        prediction = model.predict_proba(pd.DataFrame(data["data"], columns=data["columns"])
         print(prediction)
         output = {'predictions': prediction.tolist()[0]}
         return jsonify( output )
