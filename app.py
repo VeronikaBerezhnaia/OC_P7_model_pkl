@@ -17,7 +17,7 @@ def predict():
         data = request.get_json()
         print("print: "+str(pd.DataFrame(data["data"], columns=data["columns"]))
  #       prediction = model.predict_proba(data["data"][0])
-        prediction = model.predict_proba(pd.DataFrame(data["data"], columns=data["columns"])
+        prediction = model.predict_proba(pd.DataFrame(data["data"], columns=data["columns"]))
         print(prediction)
         output = {'predictions': prediction.tolist()[0]}
         return jsonify( output )
