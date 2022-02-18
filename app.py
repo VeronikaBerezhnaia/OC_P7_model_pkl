@@ -15,8 +15,8 @@ model = pickle.load(open('saved_model.pkl','rb'))
 def predict():
     try:
         data = request.get_json()
-        print("print: "+[data["data"]][0])
-        repr("repr: "+[data["data"]][0])
+        print("print: "+str([data["data"]][0]))
+        repr("repr: "+str([data["data"]][0]))
         prediction = model.predict_proba(data["data"][0])
         print(prediction)
         output = {'predictions': prediction.tolist()[0]}
