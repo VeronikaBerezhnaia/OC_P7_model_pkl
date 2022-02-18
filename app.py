@@ -10,12 +10,14 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 model = pickle.load(open('saved_model.pkl','rb'))
 
-@app.route('/predict', methods = ['POST'])
+@app.route('/predict', methods = ['POST','GET'])
 @cross_origin()
 def predict():
     try:
         data = request.get_json()
-        prediction = model.predict_proba([data['features']])
+        print(data)
+        repr(data)
+        prediction = model.predict_proba([data])
         print(prediction)
         output = {'predictions': prediction.tolist()[0]}
         return jsonify( output )
